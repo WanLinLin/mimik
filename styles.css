@@ -1,0 +1,100 @@
+.four {
+  position: relative;
+  display: flex;
+  width: 380px;
+  height: 228px;
+}
+
+.pixel {
+  position: absolute;
+  width: 32px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.four .pixel-0 {
+  left: 19%;
+  top: 18%;
+}
+
+.four .pixel-1 {
+  left: 15%;
+  top: 25%;
+}
+
+.four .pixel-2 {
+  left: 12%;
+  top: 32%;
+}
+
+.four .pixel-3 {
+  left: 8%;
+  top: 39%;
+}
+
+.four .pixel-4 {
+  left: 4%;
+  top: 47%;
+}
+
+.four .pixel-5 {
+  left: 1%;
+  top: 55%;
+}
+
+.four .pixel-6 {
+  left: -2%;
+  top: 62%;
+}
+
+.four .pixel-7 {
+  left: 5%;
+  top: 62%;
+}
+
+.four .pixel-8 {
+  left: 12%;
+  top: 62%;
+}
+
+.four .pixel-9 {
+  left: 19%;
+  top: 62%;
+}
+
+.four .pixel-10 {
+  left: 25.5%;
+  top: 62%;
+}
+
+.four .pixel-11 {
+  left: 19%;
+  top: 27%;
+}
+
+.four .pixel-12 {
+  left: 19%;
+  top: 35.5%;
+}
+
+.four .pixel-13 {
+  left: 19%;
+  top: 43.5%;
+}
+
+.four .pixel-14 {
+  left: 19%;
+  top: 53%;
+}
+
+.four .pixel-15 {
+  left: 19%;
+  top: 70%;
+}
+
+.four .pixel-16 {
+  left: 19%;
+  top: 79%;
+}
+
+/*# sourceMappingURL=styles.css.map */
