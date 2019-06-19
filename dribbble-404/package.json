@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node server.js & nodemon --watch src --ext js,html,scss --delay 1 --exec 'sass src/styles.scss public/styles.css & cp src/index.html public/index.html'",
-    "deploy": "gh-pages -d public"
+    "deploy": "sass src/styles.scss public/styles.css && cp src/index.html public/index.html && gh-pages -d public"
   },
   "keywords": [],
   "author": "",
