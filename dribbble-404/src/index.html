@@ -16,7 +16,7 @@
     document.querySelectorAll('.four-zero-four').forEach((node) => {
       for (let i = 0; i < 52; i++) {
         const img = document.createElement('img')
-        img.style.transform = `translateZ(${Math.random() * 500}px)`
+        img.style.transform = `translateZ(${Math.random() * 500 + 50}px)`
         img.className = `four-zero-four__pixel-${i}`
         img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
         img.onload = () => {
