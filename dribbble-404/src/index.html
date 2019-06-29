@@ -20,6 +20,14 @@
         node.appendChild(img)
       }
     })
+    document.querySelectorAll('.zero').forEach((node) => {
+      for (let i = 0; i < 18; i++) {
+        const img = document.createElement('img')
+        img.className = `zero__pixel-${i}`
+        img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
+        node.appendChild(img)
+      }
+    })
     document.querySelectorAll('.four').forEach((node) => {
       for (let i = 0; i < 17; i++) {
         const img = document.createElement('img')
