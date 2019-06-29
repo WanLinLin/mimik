@@ -8,6 +8,7 @@ body {
   display: flex;
   width: 419px;
   transition: all 1s ease-in-out;
+  perspective: 500px;
 }
 
 @keyframes title-vanish {
@@ -21,7 +22,7 @@ body {
 
 .four-zero-four__title {
   animation-name: title-vanish;
-  animation-duration: 1s;
+  animation-duration: 800ms;
   animation-timing-function: ease-in;
   font-size: 30vw;
   color: rgba(0, 0, 0, 0.1);
@@ -94,6 +95,7 @@ $pixel-positions:
   width: 7%;
   height: auto;
   object-fit: contain;
+  transition: all 0.8s ease-in-out;
 }
 
 @for $i from 1 through length($pixel-positions) {
