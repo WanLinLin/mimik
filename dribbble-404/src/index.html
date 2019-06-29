@@ -13,19 +13,37 @@
     <h1 class="four-zero-four__title">404</h1>
   </section>
   <script>
-    document.querySelectorAll('.four-zero-four').forEach((node) => {
-      for (let i = 0; i < 52; i++) {
-        const img = document.createElement('img')
-        img.style.transform = `translateZ(${Math.random() * 500 + 50}px)`
-        img.className = `four-zero-four__pixel-${i}`
-        img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
-        img.onload = () => {
-          img.style.transform = 'translateZ(0px)';
-          img.style.transition = 'all 0.8s ease-in-out';
+    const root = document.querySelector('.four-zero-four')
+    const images = []
+
+    for (let i = 0; i < 52; i++) {
+      const img = document.createElement('img')
+      img.style.transform = `translateZ(${Math.random() * 500 + 50}px)`
+      img.className = `four-zero-four__pixel-${i}`
+      img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
+      img.onload = () => {
+        img.isLoaded = true
+        if (img.isTimeout && img.isLoaded) {
+          img.dispatchEvent(new Event('animationReady'))
         }
-        node.appendChild(img)
       }
-    })
+      img.addEventListener('animationReady', e => {
+        img.style.transform = 'translateZ(0px)';
+        img.style.transition = 'all 0.8s ease-in-out';
+      }, false)
+      root.appendChild(img)
+      images.push(img)
+    }
+
+    setTimeout(() => {
+      for (img of images) {
+        img.isTimeout = true
+        if (img.isTimeout && img.isLoaded) {
+          img.dispatchEvent(new Event('animationReady'))
+        }
+      }
+    }, 200)
+
   </script>
 </body>
 </html>
