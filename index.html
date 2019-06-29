@@ -5,26 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>404</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="/mimik/styles.css">
 </head>
 <body>
-  <div class="four"></div>
-  <div class="zero"></div>
-  <div class="four"></div>
+  <section class="four-zero-four">
+    <h1 class="four-zero-four__title">404</h1>
+  </section>
   <script>
-    document.querySelectorAll('.four').forEach((node) => {
-      for (let i = 0; i < 17; i++) {
+    document.querySelectorAll('.four-zero-four').forEach((node) => {
+      for (let i = 0; i < 52; i++) {
         const img = document.createElement('img')
-        img.className = `pixel pixel-${i}`
+        img.style.transform = `translateZ(${Math.random() * 500}px)`
+        img.className = `four-zero-four__pixel-${i}`
         img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
-        node.appendChild(img)
-      }
-    })
-    document.querySelectorAll('.four').forEach((node) => {
-      for (let i = 0; i < 17; i++) {
-        const img = document.createElement('img')
-        img.className = `pixel pixel-${i}`
-        img.src = 'https://www.emoji.co.uk/files/apple-emojis/animals-nature-ios/209-dog-face.png'
+        img.onload = () => {
+          img.style.transform = 'translateZ(0px)';
+          img.style.transition = 'all 0.8s ease-in-out';
+        }
         node.appendChild(img)
       }
     })
