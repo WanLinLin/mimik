@@ -1,8 +1,8 @@
 .four-zero-four {
   position: relative;
   display: flex;
-  width: 380px;
-  height: 228px;
+  width: 419px;
+  height: 251px;
 }
 
 $pixel-positions:
@@ -43,7 +43,26 @@ $pixel-positions:
   ("left": 35%, "top": 43%),
   ("left": 36%, "top": 34%),
   ("left": 38%, "top": 26%),
-  ("left": 41%, "top": 20%);
+  ("left": 41%, "top": 20%),
+
+  // right four
+  ("left": 88%, "top": 18%),
+  ("left": 84%, "top": 25%),
+  ("left": 81%, "top": 32%),
+  ("left": 77%, "top": 39%),
+  ("left": 73%, "top": 47%),
+  ("left": 70%, "top": 55%),
+  ("left": 67%, "top": 62%),
+  ("left": 74%, "top": 62%),
+  ("left": 81%, "top": 62%),
+  ("left": 88%, "top": 62%),
+  ("left": 94.5%, "top": 62%),
+  ("left": 88%, "top": 27%),
+  ("left": 88%, "top": 35.5%),
+  ("left": 88%, "top": 43.5%),
+  ("left": 88%, "top": 53%),
+  ("left": 88%, "top": 70%),
+  ("left": 88%, "top": 79%);
 
 %pixel {
   position: absolute;
