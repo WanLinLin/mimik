@@ -4,12 +4,6 @@
   width: 380px;
   height: 228px;
 }
-.pixel {
-  position: absolute;
-  width: 32px;
-  height: 24px;
-  object-fit: contain;
-}
 
 $four-pixel-positions:
   ("left": 19%, "top": 18%),
@@ -30,10 +24,18 @@ $four-pixel-positions:
   ("left": 19%, "top": 70%),
   ("left": 19%, "top": 79%);
 
+%pixel {
+  position: absolute;
+  width: 32px;
+  height: 24px;
+  object-fit: contain;
+}
+
 @for $i from 1 through length($four-pixel-positions) {
   $position: nth($four-pixel-positions, $i);
 
-  .four .pixel-#{$i - 1} {
+  .four__pixel-#{$i - 1} {
+    @extend %pixel;
     left: map-get($map: $position, $key: left);
     top: map-get($map: $position, $key: top);
   }
