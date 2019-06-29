@@ -95,7 +95,6 @@ $pixel-positions:
   width: 7%;
   height: auto;
   object-fit: contain;
-  transition: all 0.8s ease-in-out;
 }
 
 @for $i from 1 through length($pixel-positions) {
